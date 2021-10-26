@@ -1,5 +1,5 @@
 {
-  "name": "learnstorybook-design-system-template",
+  "name": "@jaskaran-singh/learn-storybook-design-system",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,11 +15,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=38e63e2c54ad"
   },
   "eslintConfig": {
     "extends": [
@@ -37,7 +38,16 @@
       }
     ]
   },
-  "babel": {},
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -51,13 +61,20 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.7",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/node-logger": "^6.3.12",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.12",
+    "auto": "^10.32.1",
     "chromatic": "^6.0.4",
+    "cross-env": "^7.0.3",
     "prettier": "^2.4.1"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/jaskaran-kalra/learnstorybook-design-system.git",
+  "author": "Jaskaran Singh Kalra <wp.jaskarankalra@gmail.com>",
+  "license": "MIT"
 }
