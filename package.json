@@ -74,7 +74,7 @@
     "cross-env": "^7.0.3",
     "prettier": "^2.4.1"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/jaskaran-kalra/learnstorybook-design-system.git",
   "author": "Jaskaran Singh Kalra <wp.jaskarankalra@gmail.com>",
   "license": "MIT"
