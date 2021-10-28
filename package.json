@@ -1,7 +1,7 @@
 {
   "name": "@jaskaran-singh/learn-storybook-design-system",
   "version": "0.1.1",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -20,7 +20,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=38e63e2c54ad"
+    "chromatic": "npx chromatic --project-token=38e63e2c54ad",
+    "release": "auto shipit --base-branch=main"
   },
   "eslintConfig": {
     "extends": [
